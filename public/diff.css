@@ -1,0 +1,28 @@
+:root {
+    --borderColor: #235546;
+    --previewBg: rgba(251, 249, 243, 0.8);
+    --mainText: #4d5264;
+    --backgroundtheme: rgb(37, 128, 128);
+    --bodybackground: rgba(42, 53, 31, 1);
+    --badge: rgb(81, 90, 72, 0.8);
+    --actionmsg: white;
+    --imghover: rgb(81, 90, 72, 0.8);
+    --greetColor: #c6cce2;
+    --setting_note: rgb(187, 184, 184);
+    --mainContainercolor: #2a3519;
+    --mainColor: #606B56;
+    --secondaryColor: #465636;
+    --borderColor: #161914;
+    --mainText: #fff;
+    --secondaryText: #eeeeee;
+    --themeDotBorder: #FFF;
+    --previewBg: rgba(98, 128, 68, 0.8);
+}
+
+#preview:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: -5px 6px 7px 1px rgba(68, 93, 22, 0.596);
+    -webkit-box-shadow: -5px 6px 7px 1px rgba(19, 32, 4, 0.8);
+    -moz-box-shadow: -5px 6px 7px 1px rgba(27, 41, 14, 0.8);
+}

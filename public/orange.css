@@ -1,0 +1,27 @@
+:root {
+    --borderColor: #235546;
+    --mainText: #4d5264;
+    --backgroundtheme: rgb(37, 128, 128);
+    --bodybackground: #994141;
+    --badge: #994141;
+    --actionmsg: white;
+    --imghover: rgb(165, 111, 12);
+    --greetColor: #4d5264;
+    --setting_note: rgb(82, 77, 77);
+    --mainContainercolor: #2e6688;
+    --mainColor: #606B56;
+    --secondaryColor: #f1ad2e;
+    --borderColor: #161914;
+    --mainText: #fff;
+    --secondaryText: #eeeeee;
+    --themeDotBorder: #FFF;
+    --previewBg: #4287b5;
+}
+
+#preview:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    box-shadow: -5px 6px 7px 1px rgba(3, 25, 39, 0.596);
+    -webkit-box-shadow: -5px 6px 7px 1px rgba(2, 19, 29, 0.8);
+    -moz-box-shadow: -5px 6px 7px 1px rgba(3, 14, 22, 0.8);
+}
