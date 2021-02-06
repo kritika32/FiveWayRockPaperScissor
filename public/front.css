@@ -13,7 +13,7 @@ ul li {
     font-size: 120px;
 }
 
-ul {
+#div1 {
     text-align: center;
 }
 
@@ -112,8 +112,9 @@ a:hover {
     ul li {
         font-size: 100px;
     }
-    ul {
+    #div1 {
         text-align: center;
+        margin-top: 100px;
     }
 }
 
@@ -125,8 +126,9 @@ a:hover {
     ul li {
         font-size: 80px;
     }
-    ul {
+    #div1 {
         text-align: center;
+        margin-top: 120px;
     }
 }
 
@@ -138,8 +140,9 @@ a:hover {
     ul li {
         font-size: 60px;
     }
-    ul {
+    #div1 {
         text-align: center;
+        margin-top: 160px;
     }
 }
 
@@ -151,7 +154,8 @@ a:hover {
     ul li {
         font-size: 40px;
     }
-    ul {
+    #div1 {
+        margin-top: 200px;
         text-align: center;
     }
 }

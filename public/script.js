@@ -16,40 +16,99 @@ function getComputerChoice() {
     return choice[randomNumber];
 
 }
+let count = 0;
 
 function win(userChoice, computerChoice) {
+
+
     userScore++;
     console.log("WON")
     const userChoice_div = document.getElementById(userChoice);
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = bringWord(userChoice) + " beats " + bringWord(computerChoice) + ". You win! 😍😍 "
+    result_div.innerHTML = "Your " + bringWord(userChoice) + " beats Computer's " + bringWord(computerChoice) + ". You earn a point 😍😍 "
     userChoice_div.classList.add('green-glow')
     setTimeout(() => { userChoice_div.classList.remove('green-glow') }, 400);
+
+    if (count >= 10) {
+        console.log(count);
+        if (userScore > computerScore) {
+            result_div.innerHTML = "Congratulations 😍😍🎉🎉 You Won!!!";
+            console.log("Congratulations");
+
+        } else if (userScore == computerScore) {
+            result_div.innerHTML = "Opps Its a draw 🤐🤐🥱🥱!!!";
+
+
+        } else if (userScore < computerScore) {
+            result_div.innerHTML = "UFFFFF NOOB You Loose 😒🤦‍♂️!!!";
+            console.log("You Loose!!");
+
+        }
+    }
 }
 
 function lose(userChoice, computerChoice) {
+
+
     computerScore++;
     console.log("LOSE")
     const userChoice_div = document.getElementById(userChoice);
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = bringWord(computerChoice) + " beats " + bringWord(userChoice) + ". Sorry! You Lose 😅🤐 "
+    result_div.innerHTML = "Computer's " + bringWord(computerChoice) + " beats your " + bringWord(userChoice) + ".You Lose a point 😅🤐 "
     userChoice_div.classList.add('red-glow')
     setTimeout(() => {
         userChoice_div.classList.remove('red-glow')
     }, 400);
+
+    if (count >= 10) {
+        console.log(count);
+        if (userScore > computerScore) {
+            result_div.innerHTML = "Congratulations 😍😍🎉🎉 You Won!!!";
+            console.log("Congratulations");
+
+        } else if (userScore == computerScore) {
+            result_div.innerHTML = "Opps Its a draw 🤐🤐🥱🥱!!!";
+
+
+
+        } else if (userScore < computerScore) {
+
+            result_div.innerHTML = "UFFFFF NOOB You Loose 😒🤦‍♂️!!!";
+
+            console.log("You Loose!!");
+        }
+    }
 }
 
 function draw(userChoice, computerChoice) {
 
+    console.log(count);
     console.log("Its draw")
     const userChoice_div = document.getElementById(userChoice);
-    result_div.innerHTML = bringWord(computerChoice) + " matches " + bringWord(userChoice) + ". Opps! Its draw 👻👻 "
+    result_div.innerHTML = "Your " + bringWord(computerChoice) + " matches Computer's " + bringWord(userChoice) + ". Its a draw 👻👻 "
     userChoice_div.classList.add('yellow-glow')
     setTimeout(() => {
         userChoice_div.classList.remove('yellow-glow')
     }, 400);
+
+    if (count >= 10) {
+        console.log(count);
+        if (userScore > computerScore) {
+            result_div.innerHTML = "Congratulations 😍😍🎉🎉 You Won!!!";
+            console.log("Congratulations");
+
+        } else if (userScore == computerScore) {
+
+            result_div.innerHTML = "Opps Its a draw 🤐🤐🥱🥱!!!";
+            console.log("You Loose!!");
+
+        } else if (userScore < computerScore) {
+            result_div.innerHTML = "UFFFFF NOOB You Loose 😒🤦‍♂️!!!";
+
+        }
+    }
 }
 
 function bringWord(Choice) {
@@ -71,6 +130,7 @@ function bringWord(Choice) {
 }
 
 function game(userChoice) {
+
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
         case 'rs':
@@ -109,25 +169,27 @@ function game(userChoice) {
 
 }
 
-function main() {
+function serviceClicked(id) {
+    if (count == 10) {
+        winnercall(id);
+        return;
+    }
+    count++;
 
-    rock_div.addEventListener('click', () => {
-        game('r');
-    })
-    scissor_div.addEventListener('click', () => {
-        game('s');
-    })
-    paper_div.addEventListener('click', () => {
-        game('p');
-    })
-    water_div.addEventListener('click', () => {
-        game('w');
-    })
-    fire_div.addEventListener('click', () => {
-        game('f')
-    })
-
+    console.log("Inside onclick ");
+    game(id);
 
 }
 
-main();
+
+console.log(count);
+
+
+
+
+
+function winnercall(id) {
+    console.log("Winner");
+    document.getElementById(id).onclick = null;
+
+}
