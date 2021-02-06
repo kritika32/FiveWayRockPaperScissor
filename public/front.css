@@ -112,9 +112,13 @@ a:hover {
     ul li {
         font-size: 100px;
     }
-    #div1 {
+    ul {
         text-align: center;
+    }
+    #div1 {
+        /* text-align: center; */
         margin-top: 100px;
+        margin-left: -50px;
     }
 }
 
@@ -126,9 +130,13 @@ a:hover {
     ul li {
         font-size: 80px;
     }
-    #div1 {
+    ul {
         text-align: center;
+    }
+    #div1 {
+        /* text-align: center; */
         margin-top: 120px;
+        margin-left: -50px;
     }
 }
 
@@ -140,9 +148,13 @@ a:hover {
     ul li {
         font-size: 60px;
     }
-    #div1 {
+    ul {
         text-align: center;
+    }
+    #div1 {
+        /* text-align: center; */
         margin-top: 160px;
+        margin-left: -40px;
     }
 }
 
@@ -154,8 +166,12 @@ a:hover {
     ul li {
         font-size: 40px;
     }
+    ul {
+        text-align: center;
+    }
     #div1 {
         margin-top: 200px;
-        text-align: center;
+        /* text-align: center; */
+        margin-left: -40px;
     }
 }

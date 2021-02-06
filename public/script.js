@@ -9,6 +9,8 @@ const paper_div = document.getElementById('p')
 const scissor_div = document.getElementById('s')
 const water_div = document.getElementById('w')
 const fire_div = document.getElementById('f')
+const actionmsg = document.getElementById('action-msg');
+
 
 function getComputerChoice() {
     const choice = ['p', 'r', 'w', 's', 'f'];
@@ -172,6 +174,7 @@ function game(userChoice) {
 function serviceClicked(id) {
     if (count == 10) {
         winnercall(id);
+        actionmsg.innerHTML = `<button style="padding:10px; border:2px solid #F2A413;font-weight:bold; font-size:20px;margin-top:-10px; border-radius:10px;background:#BF213E;color:#389BA6;"onclick = "load()">Play Again</button>`;
         return;
     }
     count++;
@@ -181,6 +184,9 @@ function serviceClicked(id) {
 
 }
 
+function load() {
+    window.location.reload(true);
+}
 
 console.log(count);
 
